@@ -28,4 +28,5 @@ button.icon.circle.with-text,
     align-items: center; /* Выравнивание по вертикали */
     justify-content: center; /* Выравнивание по горизонтали */
     font-size: 1.25rem;
+    text-transform: none;
 }
