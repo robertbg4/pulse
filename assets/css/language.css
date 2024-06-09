@@ -1,0 +1,31 @@
+/* Скрываем все языковые блоки по умолчанию */
+.lang-block {
+    display: none;
+}
+
+/* Показываем блоки для активного языка */
+.lang-en.active,
+.lang-pt.active,
+.lang-ru.active {
+    display: inline;
+}
+
+
+input[type="submit"].icon.circle,
+input[type="reset"].icon.circle,
+input[type="button"].icon.circle,
+button.icon.circle.with-text,
+.button.icon.circle.with-text {
+    position: relative;
+    width: auto; /* Убираем фиксированную ширину */
+    height: auto; /* Убираем фиксированную высоту */
+    padding: 0.5rem 1rem; /* Добавляем внутренние отступы */
+    border-radius: 100px; /* Меняем на полукруглые границы */
+    overflow: hidden;
+    line-height: normal; /* Устанавливаем нормальную высоту строки */
+    text-indent: 0; /* Убираем текстовый отступ */
+    display: flex; /* Используем flexbox для размещения иконки и текста */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+    font-size: 1.25rem;
+}
