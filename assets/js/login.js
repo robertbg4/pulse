@@ -7,7 +7,12 @@ async function logVisit() {
         city: data.city,
         region: data.region,
         country: data.country_name,
-        location: `${data.latitude},${data.longitude}`
+        location: `${data.latitude},${data.longitude}`,
+        userAgent: navigator.userAgent,
+        screenSize: `${window.screen.width}x${window.screen.height}`,
+        language: navigator.language,
+        timestamp: new Date().toISOString(),
+        pageUrl: window.location.href
     };
 
     fetch('https://api.logsnag.com/v1/log', {
@@ -22,6 +27,7 @@ async function logVisit() {
             event: 'Visit Logged',
             description: `Visit from ${logData.city}, ${logData.region}, ${logData.country}`,
             icon: '👀',
+            notify: true,
             tags: logData
         })
     });
